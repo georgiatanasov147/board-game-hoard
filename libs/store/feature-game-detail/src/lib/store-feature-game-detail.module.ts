@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { storeFeatureGameDetailRoutes } from './lib.routes';
 import { GameDetailComponent } from './game-detail/game-detail.component';
-import {MatCardModule} from "@angular/material/card";
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(storeFeatureGameDetailRoutes),
-    RouterModule.forChild(storeFeatureGameDetailRoutes),
     MatCardModule,
+    MatButtonModule,
+    RouterModule,
+    HttpClientModule,
   ],
-  declarations: [GameDetailComponent],
+  declarations: [GameDetailComponent]
 })
 export class StoreFeatureGameDetailModule {}
