@@ -23,7 +23,9 @@ import { sendNotification } from "@bg-hoard/api/util-notifications";
   ]
 })
 export class AppComponent {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log("component constructed")
+  }
 
   title = 'Board Game Hoard Test';
   formatRating = formatRating;
