@@ -96,6 +96,22 @@
       "options": {
         "buildTarget": "store:build"
       }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "dependsOn": ["build"],
+      "options": {
+        "command": "surge dist/apps/store ${SURGE_DOMAIN} --token ${SURGE_TOKEN}"
+      }
+    },
+    "windows-deploy": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "dependsOn": ["build"],
+      "options": {
+        "command": "surge dist/apps/store %SURGE_DOMAIN% --token %SURGE_TOKEN%"
+      }
     }
   }
 }
