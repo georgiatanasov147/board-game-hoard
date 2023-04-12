@@ -25,7 +25,7 @@ import { sendNotification } from "@bg-hoard/api/util-notifications";
 export class AppComponent {
   constructor(private http: HttpClient) {}
 
-  title = 'Board Game Hoard';
+  title = 'Board Game Hoard Test';
   formatRating = formatRating;
   games = this.http.get<Game[]>('/api/games');
 }
