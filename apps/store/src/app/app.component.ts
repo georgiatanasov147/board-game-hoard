@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { getAllGames } from '../fake-api';
 import { MatCardModule } from "@angular/material/card";
 import { CommonModule } from "@angular/common";
 import { StoreUiSharedModule } from "@bg-hoard/store/ui-shared";
@@ -7,7 +6,6 @@ import { formatRating } from "@bg-hoard/store/util-formatters";
 import { RouterModule } from "@angular/router";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {Game} from "@bg-hoard/util-interface";
-import { sendNotification } from "@bg-hoard/api/util-notifications";
 
 @Component({
   selector: 'bg-hoard-root',
